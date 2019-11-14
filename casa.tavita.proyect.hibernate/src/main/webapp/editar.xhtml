@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<title>Actualizar Autores</title>
+</h:head>
+<h:body>
+
+	<h:form>
+	
+	<p:panelGrid columns="2"  >
+    <f:facet name="header">
+        <h1><p:outputLabel value="Actualizar Autores"></p:outputLabel></h1> 
+    </f:facet>
+     
+  
+    <p:outputLabel for="txtnombres" value="Nombres del Autor" />
+    <p:inputText id="txtnombres" value="#{autor.nombres_autor}" />
+   
+     
+    <p:outputLabel for="txtape" value="Apellidos del Autor" />
+    <p:inputText id="txtape" value="#{autor.apellidos_autor}" />
+ 
+    
+    
+    <p:outputLabel for="txtpais" value="Pais" />
+    <p:inputText id="txtpais" value="#{autor.pais}" />
+  
+  <f:facet name="footer">
+				<h:commandButton action="#{autorBean.actualizar(autor)}" value="Actualizar"></h:commandButton>
+			</f:facet>
+  
+				
+    </p:panelGrid>
+
+
+	</h:form>
+
+</h:body>
+</html>
+

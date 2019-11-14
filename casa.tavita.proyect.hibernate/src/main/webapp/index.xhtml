@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">
+<h:head>
+	
+	<title>Plantilla Básica JSF</title>
+</h:head>
+<h:body>
+<h:form>
+
+
+<p:dataTable id="dtbListAutores"  value="#{autorBean.obtenerAutores()}"
+		var="autor" >
+    <f:facet name="header">
+      Lista de Autores
+    </f:facet>
+     
+    <p:column headerText="Id">
+      
+			<h:outputText value="#{autor.id_autor}" />
+    </p:column>
+ 
+    <p:column headerText="Nombres">
+    
+        <h:outputText value="#{autor.nombres_autor}" />
+    </p:column>
+    
+     <p:column headerText="Apellidos">
+     
+ 		<h:outputText value="#{autor.apellidos_autor}" />
+  </p:column>
+  
+    <p:column headerText="Editar">
+        <p:commandButton action="#{autorBean.editar(autor.id_autor)}"
+				value="Editar"></p:commandButton>
+    </p:column>
+   
+    <p:column headerText="Elimnar">
+         <p:commandButton action="#{autorBean.eliminar(autor.id_autor)}"
+				value="Eliminar" update="dtbListAutores" ></p:commandButton>
+    </p:column> 
+    
+   
+        <f:facet name="footer">
+         <p:commandButton action="#{autorBean.nuevo()}"
+				value="Guardar" update="dtbListAutores" ></p:commandButton>
+      
+    </f:facet>
+</p:dataTable>
+
+
+
+</h:form>
+</h:body>
+</html>
