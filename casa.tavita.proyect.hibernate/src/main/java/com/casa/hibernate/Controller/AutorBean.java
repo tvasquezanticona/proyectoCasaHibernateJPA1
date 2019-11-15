@@ -21,12 +21,21 @@ public class AutorBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	public String nuevo() {
+		Autor a = new Autor();
+		Map<String,Object> sessionMap=FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		sessionMap.put("autor", a);
 		
 		
 		
 		return "nuevo.xhtml";
 	}
 	
+	public String guardar(Autor autor) {
+		AutorDAO autorDAO = new AutorDAO();
+		autorDAO.guardar(autor);
+		return "index.xhtml";
+		
+	}
 	
 	
 		public List<Autor> obtenerAutores(){

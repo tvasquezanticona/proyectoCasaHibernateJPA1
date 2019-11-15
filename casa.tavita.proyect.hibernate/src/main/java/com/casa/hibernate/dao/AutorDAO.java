@@ -22,7 +22,7 @@ public class AutorDAO implements Serializable{
 		entity.getTransaction().begin();
 		entity.persist(autor);
 		entity.getTransaction().commit();
-		JPAUtil.shutdown();
+		//JPAUtil.shutdown();
 	}
 	
 	
