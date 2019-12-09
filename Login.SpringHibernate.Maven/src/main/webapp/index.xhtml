@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">
+<h:head>
+	
+	<title>Plantilla Básica JSF</title>
+</h:head>
+<h:body>
+<h:form>
+<p:calendar id="fechaRegistro" value="#{usuarioMB.fechaRegistro}"></p:calendar>
+
+<p:outputLabel value="Ingrese Usuario"></p:outputLabel>
+<p:inputText id="username" value="#{usuarioMB.username}" ></p:inputText>
+<p:outputLabel value="Ingrese Password"></p:outputLabel>
+<p:inputText type="password" value="#{usuarioMB.password}" ></p:inputText>
+<p:commandButton value="Iniciar Session"  action="#{usuarioMB.guardarUsuario()}" ></p:commandButton>
+</h:form>
+</h:body>
+</html>

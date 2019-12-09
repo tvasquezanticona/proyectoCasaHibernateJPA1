@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 06/12/2019 04:06:11 PM by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="idpciudad" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.mapeo.miembros.Miembrosjovenes" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="miembrosjovenes">
+        <comment>Relacion de Membresia del Ministerio de Jovenes IDP Ciudad de Dios</comment>
+        <id name="idjovmiembros" type="java.lang.Long">
+            <column name="idjovmiembros"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="nombresyApellidos" optimistic-lock="true" type="string" unique="false">
+            <column length="500" name="nombresyApellidos"/>
+        </property>
+        <property generated="never" lazy="false" name="dni" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="dni"/>
+        </property>
+        <property generated="never" lazy="false" name="fecNacimiento" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fecNacimiento"/>
+        </property>
+        <property generated="never" lazy="false" name="fecConversion" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fecConversion"/>
+        </property>
+        <property generated="never" lazy="false" name="fecBautismo" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fecBautismo"/>
+        </property>
+        <property generated="never" lazy="false" name="fecPacto" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="fecPacto"/>
+        </property>
+        <property generated="never" lazy="false" name="edad" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="Edad"/>
+        </property>
+        <property generated="never" lazy="false" name="condicionEspiritual" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <column length="1" name="CondicionEspiritual"/>
+        </property>
+        <property generated="never" lazy="false" name="mayor18varon" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <column length="1" name="Mayor18Varon"/>
+        </property>
+        <property generated="never" lazy="false" name="mayor18dama" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <column length="1" name="Mayor18Dama"/>
+        </property>
+        <property generated="never" lazy="false" name="ubicacion" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="Ubicacion"/>
+        </property>
+    </class>
+</hibernate-mapping>
